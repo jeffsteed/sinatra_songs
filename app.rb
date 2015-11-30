@@ -7,6 +7,6 @@ ActiveRecord::Base.establish_connection(
 )
 
 get "/" do
-  @songs = Songs
-  return @songs.all.to_json
+  @songs = Songs.all
+  erb :index
 end
